@@ -3,12 +3,20 @@ function solve(arr){
     let matrix = arr;
     let counter = 0;
 
-    for (let row = 0; row < matrix.length-1; row++) {
+    for (let row = 0; row < matrix.length; row++) {
         
-        for (let col = 0; col < matrix[row].length-1; col++) {
+        for (let col = 0; col < matrix[row].length; col++) {
 
-            if (matrix[row][col] == matrix[row][col+1] || matrix[row][col]==matrix[row+1][col]) {
-                ++counter;
+            if (matrix[row][col] == matrix[row][col+1] ) {
+                counter++;
+            }
+
+            if (row > 0) {
+                
+                if (matrix[row][col]==matrix[row-1][col]) {
+                    counter++;
+                    
+                }
             }
         }
 

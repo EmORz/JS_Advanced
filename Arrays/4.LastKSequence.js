@@ -1,9 +1,17 @@
-function solve(arr){
+function solve(lenght, k){
 
-    arr = arr.map(Number);
-    let count = arr.shift();
+    let result = [1];
 
-    console.log(arr.slice(arr.length - count, arr.length).join(" "))
+    for (let index = 1; index < lenght; index++) {
+        
+        let temp = k * -1;
+        let test = result.slice(temp);
+        let current = result.slice(temp).reduce((a, b) => a+b);
+
+        result[index] = current;
+    }
+
+    console.log(result.join(' '))
 }
 
-solve([6, 3])
+solve(6, 3)
