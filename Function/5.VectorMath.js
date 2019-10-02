@@ -1,5 +1,5 @@
 
-function solution ()  {
+(() =>  {
 
     function add(vec1, vec2) {
         return [vec1[0]+vec2[0], vec1[1]+vec2[1]];
@@ -10,15 +10,15 @@ function solution ()  {
     }
 
     function length(vec1) {
-        return   Math.sqrt([vec1[0]*vec1[0]+ vec1[1]*vec1[1]])
+        return   Math.sqrt(vec1[0]*vec1[0]+ vec1[1]*vec1[1])
     }
 
     function dot(vec1, vec2) {
-        return [vec1[0]*vec2[0]+vec1[1]*vec2[1]]
+        return vec1[0]*vec2[0]+vec1[1]*vec2[1]
     }
 
     function cross(vec1, vec2) {
-        return [vec1[0]*vec2[1]-vec1[1]*vec2[0]]
+        return vec1[0]*vec2[1]-vec1[1]*vec2[0]
     }
     return{
        add,
@@ -27,7 +27,7 @@ function solution ()  {
         dot,
         cross
     }
-}
+})();
 let t = solution();
 
 console.log(t.add([1, 1], [1, 0]))
