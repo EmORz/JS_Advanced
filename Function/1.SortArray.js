@@ -1,15 +1,12 @@
 
-function solve(arr, command){
 
-    if(command =="asc"){
-        console.log(arr.sort((a, b)=> a-b))
-    }
-    else if(command =="desc"){
-        console.log(arr.sort((a, b)=> b-a))
-        
+
+    function main (arr, command){    
+        return command === 'asc'? arr.sort((a, b) => a-b): command === 'desc'? arr.sort((a, b) => b - a):"";
     }
 
 
-}
 
-solve([14, 7, 17, 6, 8], 'desc')
+
+
+console.log(main([14, 7, 17, 6, 8], 'desc'));

@@ -1,13 +1,17 @@
-function solve(arr){
+function main(input){
 
-    let step = Number(arr.pop());
-    let filter = arr.filter((x, indexx) => indexx % step==0).forEach(x => console.log(x));
+    let step = +input.pop();
+
+    return input.filter((el, index) => {
+        return index % step === 0
+    }).join("\n")
+
 
 }
 
-solve(['5', 
+console.log(main(['5', 
 '20', 
 '31', 
 '4', 
 '20', 
-'2'])
+'2']))

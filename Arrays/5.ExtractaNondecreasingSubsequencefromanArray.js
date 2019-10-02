@@ -1,3 +1,17 @@
+function main (input){
+
+    let result = input.reduce((acc, curr, index, arr) => {
+
+        if (curr >=  Math.max(...acc)) {
+            
+            acc.push(curr);
+        }
+        return acc;
+    }, []);
+
+    return result.join("\n");
+}
+
 function solve(arr){
 
     let arrSize = arr.length;
@@ -13,7 +27,7 @@ function solve(arr){
     }
 }
 
-solve([1, 
+console.log(main([1, 
     3, 
     8, 
     4, 
@@ -21,4 +35,4 @@ solve([1,
     12, 
     3, 
     2, 
-    24])
+    24]))

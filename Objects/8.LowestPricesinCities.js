@@ -12,6 +12,7 @@ function solve(input){
         console.log()
     }
 
+ 
     for(let[product, insideMap] of map){
         let lowerPrice = Number.POSITIVE_INFINITY;
         let townLowesrPrice = "";

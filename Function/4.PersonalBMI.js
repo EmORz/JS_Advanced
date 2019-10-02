@@ -8,7 +8,7 @@ function solve(name, age, weight, height){
         name: name,
         personalInfo: {
             age: age,
-            weght: weight,
+            weight: weight,
             height: height
         },
         BMI: bmi
@@ -17,15 +17,15 @@ function solve(name, age, weight, height){
     let status = 
     (result.BMI<18.5)? "underweight"
     :(result.BMI<25)? "normal"
-    :(result.BMI<30)? "overwight": "obese";
+    :(result.BMI<30)? "overweight" : "obese";
 
     result.status = status;
 
     if (result.status=="obese") {
-        result.recommendation = "addmision required";
+        result.recommendation = "admission required";
     }
 
     return result;
 }
-let temp = JSON.stringify(solve('Honey Boo Boo', 9, 57, 137));
-console.log(temp)
+//let temp = JSON.stringify(solve('Honey Boo Boo', 9, 57, 137));
+console.log(solve('Peter', 29, 75, 182))

@@ -1,10 +1,16 @@
-let f = (function () {
 
-    let total =0;
-    return function sum(a){
-        total+=a;
-        sum.toString = () => total;
-        return sum;
+
+function add (num){
+    let sum = num;
+
+    function calc(num2){
+        sum +=num2;
+
+        return calc;
+    
     }
-})();
-console.log(f(3)(7))
+
+    calc.toString = ()=>  sum;
+    return calc;
+}
+console.log(add(3)(7)(3))

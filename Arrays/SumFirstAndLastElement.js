@@ -8,6 +8,9 @@
 
 //     console.log(summ);
 // }
+function main (arr){
 
-let sum = arr => Number(arr.shift())+Number(arr.pop());
-console.log(sum(['5', '2']))
+    return Number(arr[0])+Number(arr[arr.length - 1]);
+}
+
+console.log(main(['5', '6' ,'15']))

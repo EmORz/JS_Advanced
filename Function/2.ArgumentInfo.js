@@ -1,23 +1,20 @@
 function solve(...arr){
+    Object.entries(
+     arr.
+    reduce((previos, current) => {
 
-    let obj = {};
+        let typeOfArg = typeof current;
 
-    for(let element of arr){
-        let typeOfElement = typeof(element);
-        let valueOfElemet = element+"";
 
-        if (!obj.hasOwnProperty(typeOfElement)) {
-            
-            obj[typeOfElement] = 0;
+        console.log(`${typeOfArg}: ${current}`)
+        if (!previos.hasOwnProperty(typeOfArg)) {
+            previos[typeOfArg] = 0;
         }
-        obj[typeOfElement]++;
-        
-        console.log(typeOfElement+": "+valueOfElemet)
-    }
 
-    var res = Object.entries(obj).map(([k, v]) => ([k, v]));
-    for(let i of res){
-        console.log(i[0]+" = "+i[1])
-    }
+        previos[typeOfArg]++;
+
+        return previos;
+    }, {})).map(([type, count]) => `${type} = ${count}`)
+    .forEach((e) => console.log(e));
 }
-solve({name: 'bob'}, 3.333, 9.999)
+console.log(solve('cat', 42, function () { console.log('Hello world!'); }))
