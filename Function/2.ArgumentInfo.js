@@ -15,6 +15,7 @@ function solve(...arr){
 
         return previos;
     }, {})).map(([type, count]) => `${type} = ${count}`)
+   
     .forEach((e) => console.log(e));
 }
-console.log(solve('cat', 42, function () { console.log('Hello world!'); }))
+console.log(solve({ name: 'bob'}, 3.333, 9.999))
