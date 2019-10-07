@@ -71,6 +71,11 @@ function solve() {
             case '*': {sum = leftNum * rightNum} break;
             case '/': {sum = leftNum / rightNum} break;
         }
+
+       
+        if (sum === undefined || sum === Infinity) {
+            sum = NaN;
+        }
         return sum;
     }
     function showResult(result) {

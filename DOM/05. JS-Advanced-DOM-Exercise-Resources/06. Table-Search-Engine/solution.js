@@ -4,14 +4,14 @@ function solve() {
    const btn = document.getElementById('searchBtn');
    const rows = document.querySelectorAll('tbody > tr');
 
-   debugger
    const handler = () => {
-      Array.from(rows).map(e => e.classList(''));
+      Array.from(rows).map(e => (e.classList=''));
       Array.from(rows).forEach(e => {
+   debugger
          Array.from(e.children).forEach(elem => {
             const text = elem.textContent;
 
-            if (text.includes(input.value)) {
+            if (text.includes(input.value) && input.value !=='') {
                elem.parentElement.className = 'select';
             }
          });
